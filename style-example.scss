@@ -1,0 +1,84 @@
+@import 'variables';
+
+//-------------------------
+// GENERAL
+//-------------------------
+.title {
+  color: $title-color;
+  font-size: $title-size;
+  font-weight: $title-weight;
+}
+
+
+//-------------------------
+// POST
+//-------------------------
+.post {
+  display: flex;
+  padding: $spacing;
+
+  color: $text-color;
+  font-size: $text-size;
+
+  // one line comment
+  @include breakpoint(from-desktop) {
+    width: 50%;
+  }
+
+  &:hover {
+    background-color: $placeholder-color;
+  }
+}
+
+.post__title {
+  @extend .title;
+
+  display: flex;
+  padding: 0 $spacing;
+
+  align-items: center;
+
+  white-space: nowrap;
+
+  background-color: $primary;
+}
+
+.post__button {
+  margin: $spacing / 2;
+
+  &:hover {
+    color: $primary;
+  }
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  &:first-of-type {
+    margin-right: 0;
+  }
+}
+
+.post__button--cancel {
+  color: $secondary;
+  background-color: $background-color;
+}
+
+
+//-------------------------
+// AVATAR
+//-------------------------
+.avatar-image {
+  width: 100%;
+  height: auto;
+}
+
+.avatar-user {
+  font-size: $text-size;
+  font-weight: $text-weight;
+
+  // user disabled modifier comment
+  &--disabled {
+    color: $placeholder-color;
+  }
+}
