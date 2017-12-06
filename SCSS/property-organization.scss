@@ -1,3 +1,10 @@
+// -------------------------------------
+// One line space between property groups
+// Two line spaces between blocks of css
+// Limit nesting to max 2 layers deep
+//-------------------------------------
+
+
 * {
   @extend .class;
 
